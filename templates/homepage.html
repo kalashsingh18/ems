@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My E-Commerce Store</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #f4f4f4;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        /* Product categories section */
+        .categories {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        .category {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .category:hover {
+            background-color: #f9f9f9;
+        }
+        /* Featured products section */
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .product {
+            flex: 0 0 30%;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .product:hover {
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My E-Commerce Store</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a> |
+        <a href="#">Shop</a> |
+        <a href="#">About Us</a> |
+        <a href="#">Contact</a>
+    </nav>
+    <div class="container">
+        <!-- Product categories section -->
+        <h2>Shop by Category</h2>
+        <div class="categories">
+            <div class="category">
+                <h3>Category 1</h3>
+                <p>Description of category 1.</p>
+            </div>
+            <div class="category">
+                <h3>Category 2</h3>
+                <p>Description of category 2.</p>
+            </div>
+            <div class="category">
+                <h3>Category 3</h3>
+                <p>Description of category 3.</p>
+            </div>
+        </div>
+        <!-- Featured products section -->
+        <h2>Featured Products</h2>
+        <div class="products">
+            <div class="product">
+                <h3>Product 1</h3>
+                <p>Description of product 1.</p>
+                <p>Price: $10.00</p>
+            </div>
+            <div class="product">
+                <h3>Product 2</h3>
+                <p>Description of product 2.</p>
+                <p>Price: $15.00</p>
+            </div>
+            <div class="product">
+                <h3>Product 3</h3>
+                <p>Description of product 3.</p>
+                <p>Price: $20.00</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

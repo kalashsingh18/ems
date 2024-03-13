@@ -1,0 +1,26 @@
+{% extends "main.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <h1>{{finals}}</h1>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redirect to Google Maps</title>
+</head>
+<body>
+
+<button onclick="redirectToGoogleMaps()">Go to Google Maps</button>
+<p id="redirectMessage"></p>
+
+<script>
+
+function redirectToGoogleMaps() {
+    window.location.href = `{{finals}}`;
+    document.getElementById("redirectMessage").innerHTML = "No, you are directed to Google Maps.";
+}
+</script>
+
+</body>
+</html>
+{% endblock %}

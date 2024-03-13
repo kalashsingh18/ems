@@ -1,0 +1,110 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Page</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+        width: 300px;
+    }
+    .container h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .container input[type="text"],
+    .container input[type="email"],
+    .container input[type="tel"],
+    .container input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    .container input[type="submit"] {
+        width: 100%;
+        background-color: #4caf50;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-bottom: 10px;
+    }
+    .container input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+    .container .switch-btn {
+        text-align: center;
+    }
+    .container .switch-btn button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+    .container .switch-btn button:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Login</h2>
+    <form action="confirmation" method="post">
+        {% csrf_token %}
+        <input type="text" placeholder="Name" name="name">
+        <input type="email" placeholder="Email" name="email">
+        <input type="tel" placeholder="Phone Number" name="phone">
+        <input type="password" placeholder="Password" name="password">
+        <input type="text" placeholder="Age" name="age">
+        <input type="submit" value="Sign Up">
+
+    </form>
+    <form action="signin" method "post">
+        {% csrf_token %}
+        <input type="submit" value="Sign in">
+        <form>
+        
+
+</div>
+
+<script>
+    function switchForm() {
+        var formTitle = document.querySelector('.container h2');
+        var submitButton = document.querySelector('.container input[type="submit"]');
+        var switchButton = document.querySelector('.container .switch-btn button');
+
+        if (formTitle.textContent === "Login") {
+            formTitle.textContent = "Register";
+            submitButton.value = "Sign Up";
+            switchButton.textContent = "Sign In";
+        } else {
+            formTitle.textContent = "Login";
+            submitButton.value = "Sign In";
+            switchButton.textContent = "Sign Up";
+        }
+    }
+</script>
+</body>
+</html>
