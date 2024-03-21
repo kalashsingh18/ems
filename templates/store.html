@@ -9,8 +9,10 @@
                 <div class="box-element product">
                     <h6><strong>{{ products.name }}</strong></h6>
                     <hr>
+                    <a href="cart" method="post">
                     <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
-                    <a class="btn btn-outline-success" href="#">View</a>
+                    </a>
+                    <a class="btn btn-outline-success" href="view",method="post">View</a>
                     <h4 style="display: inline-block; float: right"><strong>{{ products.price|floatformat:2 }}</strong></h4>
                 </div>
             </div>

@@ -18,7 +18,7 @@ urlpatterns = [
     path("Createshop",views.createshop,name="createshop.html"),
     path("shopcreated",views.shopcreated,name="shopcreated"),
     path("searchshop",views.searchshop,name="searchshop"),
-    path("order_tracking",views.searchshop,name="searchshop")
-
+    path("order_tracking",views.searchshop,name="searchshop"),
+    path("view",views.view,name="view")
     
 ]

@@ -150,6 +150,11 @@ def shopcreated(request):
         password = request.POST.get("password")
         products = request.POST.get("products")
         shop_name = request.POST.get("shopName")
+        try:
+            longitude = float(longitude)
+            latitude = float(latitude)
+        except (TypeError, ValueError):
+            return HttpResponse("Invalid longitude or latitude value")
         
         # Create a new Shop instance with the provided data
         new_shop = Shop(
@@ -197,12 +202,14 @@ def searchshop(request):
                 print(final)
                 
                 return render(request,"finallyyy.html",{"finals":final})
- 
+    return HttpResponse(queryset)
+def view(request):
+    product=request.POST.get("product")
+    return render(request,"views.html",{"products":product})
       
            
            
     
-    return HttpResponse(queryset)
 
         
 
