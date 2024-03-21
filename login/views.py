@@ -13,7 +13,9 @@ def confirmation(request):
      if filter(names) and filterp(passwords):
          user1=User(name=names,password=passwords,email=emails)
          user1.save()
+         print("hello")
          return render(request,"confirmation.html")
+         
      if filterp(passwords)==False:
          return HttpResponse("not valid password may contain an special character")
 
